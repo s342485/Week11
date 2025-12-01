@@ -23,6 +23,7 @@ class Controller:
             num_nodi = self._model.calcolaConnessa(id)
             self._view.txt_result.controls.clear()
             self._view.txt_result.controls.append(ft.Text(f"Dim componente connessa: {num_nodi}"))
+            self._view.update_page()
         except ValueError:
             self._view.txt_result.controls.clear()
             self._view.txt_result.controls.append(ft.Text(f"Inserisci un id valido"))
